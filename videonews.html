@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- start main heading -->
+<div class="row text-center">
+  <div class="text-center fs-3">
+    <hr class="w-25 mx-auto">
+    Latest <b class="text-mycolor1">Video News<i class="fa-solid fa-user-graduate"></i><br>
+      <hr class="w-50 mx-auto">
+    </b>
+  </div>
+</div>
+
+<!-- end main heading -->
+<div class="row p-4" style="background: #f2f2f2;">
+  {% for r in vnews %}
+  <!--video news card-->
+  <div class="col-sm-4">
+    <!--news detail card start-->
+    <div class="card mb-3 shadow-lg my-2 p-2">
+      <iframe class="card-img-top" style="min-height: 280px;" src="{{r.video_link}}" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="card-body">
+        <h5 class="card-title">{{r.title}}</h5>
+        <p class="card-text">{{r.news_info| slice:120}}</p>
+        <p class="card-text">
+          <b>{{r.category}}</b><br />
+          <small class="bg-mycolor1 badge text-light float-start">
+            <i class="fa-solid fa-caalender"></i><b>posted Date: </b>{{r.posted_date}}
+          </small>
+        </p>
+        <p class="card-text">
+          <small class="bg-mycolor1 badge text-light float-end">
+            <i class="fa-solid fa-caalender"><b> {{r.city}}</b></i>
+          </small>
+        </p>
+      </div>
+    </div>
+
+    <!--news detail cards ends-->
+  </div>
+  
+  <!-- end video news card-->
+
+  {% endfor %}
+</div>
+
+{% endblock %}
+
+
+
