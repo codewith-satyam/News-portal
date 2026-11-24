@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!--services section start-->
+<div class="row services py-3">
+  <p class="text-center fs-3">Our <B class="text-mycolor1">Services</B></p>
+  <div class="col-sm-10 mx-auto">
+    <div class="row">
+      <!--services section card  start-->
+      <div class="col-sm-3">
+        <div class="card mx-auto shadow-lg">
+          <img src="{% static 'images/restaurant.png' %}" class="card-img-top img-fluid im" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Dine-In Experience</h5>
+            <p class="card-text">Relax and enjoy authentic Indian food in a cozy, primium atmosphere.</p>
+            <a href="#" class="btn btn-primary">View Menu</a>
+          </div>
+        </div>
+      </div>
+      <!--services section card end -->
+      <!--services section card  start-->
+      <div class="col-sm-3">
+        <div class="card mx-auto shadow-lg">
+          <img src="{% static 'images/deliver.png' %}" class="card-img-top img-fluid im" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Home Delivery</h5>
+            <p class="card-text">Your favorite dishes, hot and fresh, delivered straight to your doorstep.</p>
+            <a href="#" class="btn btn-primary">Order Now</a>
+          </div>
+        </div>
+      </div>
+      <!--services section card end -->
+      <!--services section card  start-->
+      <div class="col-sm-3">
+        <div class="card mx-auto shadow-lg">
+          <img src="{% static 'images/celebration.jpg' %}" class="card-img-top img-fluid im" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Birthday/Part Booking</h5>
+            <p class="card-text">Celebrate birthdays, anniversaries & special moment with us! </p>
+            <a href="#" class="btn btn-primary">Book Table</a>
+          </div>
+        </div>
+      </div>
+      <!--services section card end -->
+      <!--services section card  start-->
+      <div class="col-sm-3">
+        <div class="card mx-auto shadow-lg">
+          <img src="{% static 'images/catering.jpg' %}" class="card-img-top img-fluid im" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Buffet & Catering</h5>
+            <p class="card-text">Delicious food for weedings, event & office parties.</p>
+            <a href="#" class="btn btn-primary">Grab Now</a>
+          </div>
+        </div>
+      </div>
+      <!--services section card end -->
+    </div>
+  </div>
+</div>
+<!--services section end-->
+
+{% endblock %}

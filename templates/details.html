@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-sm-7 mx-auto">
+    <p class="text-center fs-3">News <b class="text-mycolor1">Details</b> </p>
+    {% for r in news %}
+    <!--news detail card start-->
+    <div class="card mb-3">
+      <img src="../{{r.picture}}" style="max-height: 350px;" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{r.headlines}}</h5>
+        <p class="card-text">{{r.description}}</p>
+        <p class="card-text">
+          <b>{{r.category}}</b><br />
+          <small class="bg-mycolor1 badge text-light float-start">
+            <i class="fa-solid fa-caalender"><b> {{r.posteddate}}</b></i>
+
+          </small>
+        </p>
+        <p class="card-text">
+          <small class="bg-mycolor1 badge text-light float-end">
+            <i class="fa-solid fa-caalender"><b> {{r.city}}</b></i>
+
+          </small>
+        </p>
+
+      </div>
+    </div>
+    <!--news detail cards ends-->
+    {% endfor %}
+
+  </div>
+</div>
+
+
+{% endblock %}

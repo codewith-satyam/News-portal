@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="row">
+  <p class="text-center fs-3">Contact <B class="text-mycolor1">Us</B></p>
+  <div class="col-sm-6 mx-auto">
+    <form method="post">
+      {% csrf_token %}
+      <!--form control ka use text ko responsive karne ke liye use karte hai-->
+      <input type="text" class="form-control txt" required placeholder="Name.." name="name" />
+      <input type="email" class="form-control txt" required placeholder="Email.." name="email" />
+      <input type="number" class="form-control txt" required placeholder="Mobile.." name="mob" />
+      <textarea class="form-control ta" required placeholder="Message" name="msg"></textarea>
+
+      <input type="submit" value="Save" class="form-control bg-mycolor1 btn1" />
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}
