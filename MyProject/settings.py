@@ -26,14 +26,15 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-local-development-key
 
 DEBUG = os.environ.get("DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = os.environ.get(
-    "ALLOWED_HOSTS",
-    "localhost,127.0.0.1"
-).split(",")
-CSRF_TRUSTED_ORIGINS = [
-    "https://news-portal-c1w7.onrender.com"
+ALLOWED_HOSTS = [
+    "news-portal-c1w7.onrender.com",
+    "localhost",
+    "127.0.0.1",
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://news-portal-c1w7.onrender.com",
+]
 
 # Application definition
 
