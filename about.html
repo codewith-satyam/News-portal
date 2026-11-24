@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!--about us start-->
+<div class="row aboutus py-2">
+  <p class="text-center fs-3">About <B class="text-mycolor1">Us</B></p>
+  <div class="col-sm-10 mx-auto">
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="{% static 'images/br.png' %}" class="img-thumbnail w-100 imgabout" />
+      </div>
+      <div class="col-sm-6 ">
+        <p class="p-3 aboutcontent">
+          Welcome to <b>BHARAT NEWS 24</b> — your trusted source for fast, factual, and fearless journalism.
+          We are committed to bringing you the latest news from every corner of India and around the world.
+          Whether it's politics, sports, entertainment, technology, or local updates — we cover it all with
+        </p>
+        <p class="px-3 aboutcontent">
+          हमारा उद्देश्य है सच्ची और निष्पक्ष खबरें आप तक पहुँचाना।
+          भारत न्यूज़ 24 आपको हर उस खबर से जोड़ता है जो आपके जीवन को प्रभावित करती है।
+          हमारी टीम बिना किसी दबाव के, जनता की आवाज़ को सामने लाने का कार्य करती है।
+        <p>
+          <b>Our Vision:</b> To empower every citizen with real, relevant, and rapid news. <br>
+          <b>Our Values:</b> Truth, Transparency, Trust.
+        </p>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--about us end -->
+
+{% endblock %}
